@@ -7,15 +7,23 @@ paper.addEventListener('click', () => playRound('paper', playComputer()));
 const scissors = document.querySelector('#scissors');
 scissors.addEventListener('click', () => playRound('scissors', playComputer()));
 
+const playerScore = document.querySelector('#playerScore');
+const computerScore = document.querySelector('#computerScore');
+const message = document.querySelector('#message');
+
 
 function playRound(playerSelection, computerSelection) {
     
+    // 3 = draw, 2 = loose, 1 = win
+
     if (playerSelection === computerSelection) {
-        console.log('');
+        message.textContent = 'It\'s a tie';
     } else if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
-        console.log('1');
+        playerScore.textContent = (Number(playerScore.textContent) + 1);
+        message.textContent = 'Player wins!';
     } else {
-        console.log('2');
+        computerScore.textContent = (Number(computerScore.textContent) + 1);
+        message.textContent = 'Computer wins';
     };
 }
 
