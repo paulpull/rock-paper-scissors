@@ -11,7 +11,7 @@ scissors.addEventListener('click', () => playRound('scissors', playComputer()));
 function playRound(playerSelection, computerSelection) {
     
     if (playerSelection === computerSelection) {
-        console.log('3');
+        console.log('');
     } else if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
         console.log('1');
     } else {
@@ -51,12 +51,4 @@ function playComputer() {
 //     } else {
 //         alert   ("It's a Draw. Wanna play again? The final score is: Player: " + playerScore + " Computer: " + computerScore);
 //     }
-// }
-
-
-// used before ui
-
-// function playPlayer() {
-//     let playerChoice = prompt('What do you play? Rock/Paper/Scissors');
-//     return playerChoice.toLowerCase();
 // }
