@@ -1,56 +1,28 @@
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', () => playRound('rock', playComputer()));
 
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', () => playRound('paper', playComputer()));
+
+const scissors = document.querySelector('#scissors');
+scissors.addEventListener('click', () => playRound('scissors', playComputer()));
+
+
+function playRound(playerSelection, computerSelection) {
+    
+    if (playerSelection === computerSelection) {
+        console.log('3');
+    } else if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'paper' && computerSelection === 'rock') || (playerSelection === 'scissors' && computerSelection === 'paper')) {
+        console.log('1');
+    } else {
+        console.log('2');
+    };
+}
 
 function playComputer() {
     const choices = ['rock','paper','scissors'];
     const random = Math.floor(Math.random()*choices.length);
     return choices[random];
-}
-
-function playPlayer() {
-    let playerChoice = prompt('What do you play? Rock/Paper/Scissors');
-    return playerChoice.toLowerCase();
-}
-
-const rock = document.querySelector('#rock');
-rock.addEventListener('click', () => playRound('rock'));
-
-const paper = document.querySelector('#paper');
-paper.addEventListener('click', () => playRound('paper'));
-
-const scissors = document.querySelector('#scissors');
-scissors.addEventListener('click', () => playRound('scissors'));
-
-function playRound(playerSelection) {
-    
-    const computerSelection = playComputer();
-
-    if (playerSelection === 'rock') {
-        if (computerSelection === 'rock') {
-            console.log("3");
-        } else if (computerSelection === 'paper') {
-            console.log("2");
-        } else {
-            console.log("1");
-        };
-    } else if (playerSelection === 'paper') {
-        if (computerSelection === 'paper') {
-            console.log("3");
-        } else if (computerSelection === 'scissors') {
-            console.log("2");
-        } else {
-            console.log("1");
-        };
-    } else if (playerSelection === 'scissors') {
-        if (computerSelection === 'scissors') {
-            console.log("3");
-        } else if (computerSelection === 'rock') {
-            console.log("2");
-        } else {
-            console.log("1");
-        };
-    } else {
-        return;
-    }
 }
 
 // function game() {
@@ -79,4 +51,12 @@ function playRound(playerSelection) {
 //     } else {
 //         alert   ("It's a Draw. Wanna play again? The final score is: Player: " + playerScore + " Computer: " + computerScore);
 //     }
+// }
+
+
+// used before ui
+
+// function playPlayer() {
+//     let playerChoice = prompt('What do you play? Rock/Paper/Scissors');
+//     return playerChoice.toLowerCase();
 // }
