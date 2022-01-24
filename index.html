@@ -6,15 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <script src='script.js' defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button id='rock'>ROCK</button>
-    <button id='paper'>PAPER</button>
-    <button id='scissors'>SCISSORS</button>
-    <div>
-        <div>Player: <div id='playerScore'>0</div></div>
-        <div>Computer: <div id='computerScore'>0</div></div>
+    <div class="content">
+        <div id="title">
+            <h1 id="">rock paper scissors</h1>
+        </div>
+        <div id='buttons'>
+            <button id='rock'><img src="assets/rock.png" alt="raised fist"></button>
+            <button id='paper'><img src="assets/paper.png" alt="raised hand"></button>
+            <button id='scissors'><img src="assets/scissors.png" alt="hand with index and middle finger raised"></button>
+        </div>
+        <div id='scoreBoard'>
+            <div id="player">Player: <div id='playerScore'>0</div></div>
+            <div id="computer">Computer: <div id='computerScore'>0</div></div>
+        </div>
         <div id='message'></div>
     </div>
+    <footer id="footer">made by <a href="https://pavol.me">Pavol Santoris</a> <a href="https://github.com/pavol-me"><img src="assets/GitHub-Mark-32px.png" alt="GitHub logo"></a></footer>
 </body>
 </html>

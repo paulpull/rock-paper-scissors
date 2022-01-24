@@ -1,0 +1,103 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(172deg, rgb(0, 255, 157) 0.00%, rgb(227, 43, 175) 75.56%);
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+#title h1 {
+    text-align: center;
+    font-family: 'Righteous', cursive;
+    font-size: 5em;
+}
+
+#buttons {
+    margin-top: 5em;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+}
+
+#buttons button {
+    border-radius: 7%;
+    background-color: grey;
+}
+
+#rock {
+    margin-left: 25%;
+}
+
+#rock img {
+    width: 10em;
+    height: 10em;
+}
+
+#paper img {
+    width: 10em;
+    height: 10em;
+}
+
+#scissors {
+    margin-right: 25%;
+}
+
+#scissors img {
+    width: 10em;
+    height: 10em;
+}
+
+#scoreBoard {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    column-gap: 5em;
+    margin-top: 5em;
+    margin-left: 40%;
+    margin-bottom: 5em;
+}
+
+#player {
+    display: inline;
+    font-size: 2em;
+    text-align: center;
+}
+
+#playerScore {
+    display: inline;
+}
+
+#computer {
+    display: inline;
+    font-size: 2em;
+    text-align: center;
+}
+
+#computerScore {
+    display: inline;
+}
+
+#message {
+    font-size: 2em;
+    text-align: center;
+}
+
+#footer {
+    flex-shrink: 0;
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+#footer img {
+    width: 1em;
+    height: 1em;
+}
+
