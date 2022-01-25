@@ -27,8 +27,8 @@ body {
 }
 
 #buttons button {
-    border-radius: 7%;
-    background-color: grey;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 #rock {
